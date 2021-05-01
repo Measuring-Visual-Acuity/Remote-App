@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RemoteApp"
         android:usesCleartextTraffic="true">
+        <activity android:name=".NonPeriscope"></activity>
+        <activity android:name=".SegregatedActivity" />
+        <activity android:name=".RegistrationActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -45,8 +45,8 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(MainActivity.this, "Hello kartiik.", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(SplashActivity.this,RegistrationActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(SplashActivity.this,RegistrationActivity.class);
+                startActivity(intent);
             }
         });
     }

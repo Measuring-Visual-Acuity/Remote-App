@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SegregatedActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sampleText"
+        android:text="Select Mode"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"></TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@+id/sampleText">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="PERISCOPE"
+            android:id="@+id/periscope"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/ovalbutton"
+            android:paddingVertical="40dp"
+            android:layout_marginVertical="20dp">
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="NON PERISCOPE"
+            android:id="@+id/nonperiscope"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:background="@drawable/ovalbutton"
+            android:textStyle="bold"
+            android:layout_below="@+id/periscope"
+            android:paddingVertical="40dp">
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>
