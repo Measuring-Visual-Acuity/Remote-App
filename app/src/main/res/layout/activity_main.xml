@@ -1,18 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".NonPeriscope"
+    android:background="#fff">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chartButtons"
+        android:visibility="visible">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Select Chart type"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"></TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonsMain"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonEnglish"
+                android:text="English"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/ovalbutton"
+                android:layout_marginHorizontal="30dp"
+                android:textStyle="bold"
+                android:padding="40dp">
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonOctlets"
+                android:text="Landlot C"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:paddingVertical="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ovalbutton"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@+id/buttonEnglish">
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentData"
+        android:visibility="visible"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click on the button to display image."
+            android:id="@+id/sampleDisplayText"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/sampleEyeText"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/sampleDisplayText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal">
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayImage"
+            android:layout_below="@+id/sampleEyeText"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:clickable="true">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Image Displayed."
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sampleDisplayImageShown"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/displayImage"
+            android:visibility="invisible"
+            android:gravity="center_horizontal">
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shownImages"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/sampleDisplayImageShown"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/posi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shownImages"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sample"
+            android:layout_marginTop="30dp"
+            android:text="Did the patient guess the correct letter?"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_below="@id/posi"
+            android:visibility="invisible"
+            android:gravity="center_horizontal">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/sample"
+            android:layout_marginTop="25dp"
+            android:visibility="invisible"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/yesButton"
+                android:background="@drawable/ic_check_circle_black_24dp"
+                android:layout_below="@+id/shownImages"
+                android:paddingHorizontal="10dp"
+                android:layout_marginHorizontal="25dp">
+            </Button>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/noButton"
+                android:background="@drawable/ic_cancel_black_24dp"
+                android:layout_below="@+id/shownImages"
+                android:layout_marginHorizontal="25dp"
+                android:layout_toRightOf="@+id/yesButton">
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
