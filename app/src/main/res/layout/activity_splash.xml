@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        />-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayLogo"
+        android:src="@drawable/opti1"
+        android:layout_marginHorizontal="30dp"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        >
+    </ImageView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getStarted"
+        android:background="@drawable/ovalbutton"
+        android:layout_marginHorizontal="50dp"
+        android:text="Get Started"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>
